@@ -1,6 +1,6 @@
-function getDataMkd(){
+function getDataMkd(code){
     $.ajax({
-        url:"https://restcountries.eu/rest/v2/alpha/mkd",
+        url:`https://restcountries.eu/rest/v2/alpha/${code}`,
         success: function(data){
             let country = data;
             console.log(country);
@@ -12,7 +12,7 @@ function getDataMkd(){
         
     })
 }
-getDataMkd();
+getDataMkd('mkd');
 
 function getBorderingCountriesMkd(country) {
     for( const neighbors of country.borders){
