@@ -4,7 +4,7 @@ function getDataMkd(){
         success: function(data){
             let country = data;
             console.log(country);
-            console.log(getBorderingCountriesMkd(country));
+            getBorderingCountriesMkd(country);
         },
         error: function (error){
             console.log(error);
@@ -26,4 +26,4 @@ function getBorderingCountriesMkd(country) {
         }
     })
     }
-},
+}
