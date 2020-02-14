@@ -6,18 +6,18 @@ function Academy(name, students, subjects, start, end) {
     this.end = end;
     this.numberOfClases = 10 * this.subjects.length;
     this.printStudents = function(){
-        console.log(students)
+        console.log(this.students)
     };
     this.printSubjects = function(){
-        console.log(subjects)
+        console.log(this.subjects)
     }
 
 };
 
-function Subject(title, academy, students){
+function Subject(title, isElective, academy, students){
     this.title = title;
     this.numberOfClases = 10;
-    this.isElective = true;
+    this.isElective = isElective;
     this.academy = academy;
     this.students = students;
     this.overrideClasses = function(number){
