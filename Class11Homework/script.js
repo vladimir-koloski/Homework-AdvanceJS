@@ -75,10 +75,11 @@ console.log(student5)
 student5.attendCiscoExam();
 student5.getStudentAcademy(student5)
 
-function Teacher(firstName, lastName, age, academyName, studentId, subject){
-    Object.setPrototypeOf(this, new Student(firstName, lastName, age, academyName, studentId))
+function Teacher(firstName, lastName, age, academyName, id, subject){
+    Object.setPrototypeOf(this, new Person(firstName, lastName, age))
     this.subject = subject;
-    this.academy
+    this.academyName = academyName;
+    this.id = id
     this.teach = () => {
         console.log(`The teacher ${this.getFullName()} is teaching ${subject}`)
     }
