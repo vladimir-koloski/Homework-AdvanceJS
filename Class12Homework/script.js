@@ -26,44 +26,41 @@ class Animal {
     };
 }
 
-let bunny1 = new Animal('bunny1', 'herbivore', 2, 3)
-console.log(bunny1)
-
 const animalsDb = {
     animals: [],
 
     generateBunny: function () {
         for (let i = 0; i < 10; i++) {
-            this.addAnimal(new Animal(`Bunny${i}`, `herbivore${i}`, Math.floor((Math.random() * 5) + 1), Math.floor((Math.random() * 5) + 1) ));
+            this.addAnimal(new Animal(`Bunny${i}`, `herbivore`, Math.floor((Math.random() * 5) + 1), Math.floor((Math.random() * 5) + 1) ));
         }
     },
 
     generateWolf: function () {
         for (let i = 0; i < 10; i++) {
-            this.addAnimal(new Animal(`Wolf${i}`, `carnivore${i}`, Math.floor((Math.random() * 15) + 1), Math.floor((Math.random() * 31) + 10) ));
+            this.addAnimal(new Animal(`Wolf${i}`, `carnivore`, Math.floor((Math.random() * 15) + 1), Math.floor((Math.random() * 31) + 10) ));
         }
     },
 
     generateElephant: function () {
         for (let i = 0; i < 10; i++) {
-            this.addAnimal(new Animal(`Elephant${i}`, `herbivore${i}`, Math.floor((Math.random() * 90) + 1), Math.floor((Math.random() * 2001) + 1000) ));
+            this.addAnimal(new Animal(`Elephant${i}`, `herbivore`, Math.floor((Math.random() * 90) + 1), Math.floor((Math.random() * 2001) + 1000) ));
         }
     },
 
     generatePig: function () {
         for (let i = 0; i < 10; i++) {
-            this.addAnimal(new Animal(`Pig${i}`, `omnivore${i}`, Math.floor((Math.random() * 20) + 1), Math.floor((Math.random() * 31) + 20) ));
+            this.addAnimal(new Animal(`Pig${i}`, `omnivore`, Math.floor((Math.random() * 20) + 1), Math.floor((Math.random() * 31) + 20) ));
         }
     },
 
-    getAnimal: function () {
-        return this.animals;
-    },
-
+    
     addAnimal: function (animal) {
         this.animals.push(animal);
         
     },
 }
 animalsDb.generateBunny();
-console.log(animals)
+animalsDb.generateWolf();
+animalsDb.generateElephant();
+animalsDb.generatePig();
+console.log(animalsDb.animals)
