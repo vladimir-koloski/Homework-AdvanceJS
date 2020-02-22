@@ -146,7 +146,7 @@ const configs = {
             max:50
         },
     },
-    generateAnimals: function (nam, typ, ag, siz) {
+    generateAnimals: function () {
         for (let i = 0; i < 10; i++) {
             this.addAnimal(new Animal('name', 'type', Math.floor(Math.random() * (configs.bunny.ag.max - configs.bunny.ag.min + 1)) + configs.bunny.ag.min, Math.floor(Math.random() * (configs.bunny.siz.max - configs.bunny.siz.min + 1)) + configs.bunny.siz.min));
         }
