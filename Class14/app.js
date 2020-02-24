@@ -1,0 +1,1 @@
+HTMLFormControlsCollection.log('Hello from app.js')
